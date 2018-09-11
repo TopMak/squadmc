@@ -18,9 +18,9 @@ module.exports = {
     // this is probably not the right way to do it, but it works.
     // FIXME: do this properly
     if (process.env.NODE_ENV === "production") {
-      config.optimization.splitChunks.cacheGroups.vuetify = {
-        test: /[\\/]vuetify[\\/]/,
-      };
+      // config.optimization.splitChunks.cacheGroups.vuetify = {
+      //   test: /[\\/]vuetify[\\/]/,
+      // };
 
       // remove console prints
       config.optimization.minimizer[0].options.uglifyOptions.compress.drop_console = true;

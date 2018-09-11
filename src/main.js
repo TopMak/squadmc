@@ -9,7 +9,7 @@ import Vue from "vue";
 import Raven from "raven-js";
 import RavenVue from "raven-js/plugins/vue";
 
-// import "./plugins/vuetify";
+import "./plugins/vuetify";
 import App from "./App.vue";
 
 // Sentry.io error reporting tool

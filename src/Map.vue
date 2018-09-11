@@ -579,9 +579,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
 
 import { CRS, LatLng, LatLngBounds, Map, Point, Polyline, Rectangle, Transformation } from "leaflet";
 
@@ -604,7 +601,7 @@ import MortarPin from "./assets/marker/pin/MortarPin";
 import TargetPin from "./assets/marker/pin/TargetPin";
 import FobPin from "./assets/marker/pin/FobPin";
 
-Vue.use(Vuetify, {});
+// Vue.use(Vuetify, {});
 
 export default {
   name: "Map",
