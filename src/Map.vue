@@ -817,7 +817,7 @@ export default {
       const x = 256 / squadMap.bounds.getNorth(); // 256 is inital tile size
       const y = 256 / squadMap.bounds.getEast();
       this.map.options.crs.transformation = new Transformation(y, 0, x, 0);
-      this.map.fitBounds(squadMap.bounds);
+      // this.map.fitBounds(squadMap.bounds);
       this.map.setMaxBounds(squadMap.bounds.pad(0.5));
 
       console.log("setting up grid");
@@ -859,11 +859,11 @@ export default {
 
       console.log("setting up map layer");
       this.map.addLayer(layer); // finally add the map
-      this.map.setView(squadMap.bounds.getCenter()); // center view
+      this.map.setView(squadMap.bounds.getCenter(), this.map.getBoundsZoom(squadMap.bounds, true)); // center view
 
       // hack to properly align map and squadgrid
       // eslint-disable-next-line no-underscore-dangle
-      this.map._resetView(this.map.getCenter(), this.map.getZoom());
+      this.map._resetView(this.map.getCenter(), this.map.getBoundsZoom(squadMap.bounds, true));
 
       this.squadMap = squadMap;
     },
