@@ -784,7 +784,8 @@ export default {
         attributionControl: false,
         zoomControl: false,
         layers: [],
-        // zoomSnap: 0, // not needed for new scaling with tile layers
+        zoomSnap: 0,
+        preferCanvas: true,
       });
 
       this.map.on("mousemove", this.onMouseMove, this);
