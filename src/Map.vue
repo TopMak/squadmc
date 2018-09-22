@@ -581,6 +581,31 @@
 <script>
 
 import { CRS, LatLng, LatLngBounds, Map, Point, Polyline, Rectangle, Transformation } from "leaflet";
+import Vue from "vue";
+// required for Vuetify's a-la-carte functionality
+import "vuetify/src/stylus/app.styl";
+import {
+  Vuetify,
+  VApp,
+  VBadge,
+  VBtn,
+  VBtnToggle,
+  VCard,
+  VDialog,
+  VDivider,
+  VForm,
+  VGrid,
+  VIcon,
+  VList,
+  VMenu,
+  VNavigationDrawer,
+  VSelect,
+  VSlider,
+  VSpeedDial,
+  VSwitch,
+  VTextField,
+  VToolbar,
+} from "vuetify";
 
 import SquadGrid from "./assets/Leaflet_extensions/SquadGrid";
 import LocationLayer from "./assets/Leaflet_extensions/LocationLayer";
@@ -601,7 +626,29 @@ import MortarPin from "./assets/marker/pin/MortarPin";
 import TargetPin from "./assets/marker/pin/TargetPin";
 import FobPin from "./assets/marker/pin/FobPin";
 
-// Vue.use(Vuetify, {});
+Vue.use(Vuetify, {
+  components: {
+    VApp,
+    VBadge,
+    VBtn,
+    VBtnToggle,
+    VCard,
+    VDialog,
+    VDivider,
+    VForm,
+    VGrid,
+    VIcon,
+    VList,
+    VMenu,
+    VNavigationDrawer,
+    VSelect,
+    VSlider,
+    VSpeedDial,
+    VSwitch,
+    VTextField,
+    VToolbar,
+  },
+});
 
 export default {
   name: "Map",
