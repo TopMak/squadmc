@@ -594,9 +594,12 @@ import {
   VDialog,
   VDivider,
   VForm,
+  VFooter,
+  VInput,
   VGrid,
   VIcon,
   VList,
+  VLabel,
   VMenu,
   VNavigationDrawer,
   VSelect,
@@ -635,9 +638,12 @@ Vue.use(Vuetify, {
     VCard,
     VDialog,
     VDivider,
+    VFooter,
     VForm,
     VGrid,
     VIcon,
+    VInput,
+    VLabel,
     VList,
     VMenu,
     VNavigationDrawer,
@@ -1838,5 +1844,10 @@ body::-webkit-scrollbar {
 .absolute-layer {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
+}
+
+/* FIXME: Vuetify a-la-carte changes class order of switches. This hack restores normal behaviour */
+.v-input--selection-controls .v-input__slot {
+  margin-bottom: 0;
 }
 </style>
